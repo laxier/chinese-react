@@ -8,6 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 </head>
 <body>
 <h1>Lesson 31 Materials</h1>
@@ -33,11 +35,7 @@
 </div>
 
 <div class="material">
-    <h2>4. Text for Reading</h2>
-    <audio controls>
-        <source src="L31_4_Text_for_reading.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <div id="text-for-reading-container"></div>
 </div>
 
 <div class="material">
@@ -56,9 +54,10 @@
 </div>
 
 <script src="exercisesData.js"></script>
+<script src="L31_4_Text_for_reading.js"></script>
 <!--    <script type="text/babel" src="app.js"></script>-->
 <script type="text/babel">
-    const {useState, useRef} = React;
+    const {useState, useEffect} = React;
     const LexicalSubstitutionExercise = ({exercises, audioRef}) => {
         const [currentIndex, setCurrentIndex] = useState(0);
         const [isPlaying, setIsPlaying] = useState(false);
@@ -137,7 +136,23 @@
             </div>
         );
     };
-    const App = () => {
+
+    const TextForReading = ({audioSrc, text}) => {
+        return (
+            <div className="material">
+                <h2>4. Text for Reading</h2>
+                <audio controls>
+                    <source src={audioSrc} type="audio/mpeg"/>
+                    Your browser does not support the audio element.
+                </audio>
+                <div className="chinese-dialogue" style={{minWidth: '100%'}}
+                     dangerouslySetInnerHTML={{__html: text}}>
+                </div>
+            </div>
+        );
+    };
+
+    const Lexical = () => {
         const audioRef = React.useRef(null);
 
         return (
@@ -151,9 +166,26 @@
             </div>
         );
     };
+    const Reading = () => {
+        const [textContent, setTextContent] = useState('');
 
-    ReactDOM.render(<App/>, document.getElementById('lexical-substitution-exercise-container'));
+        useEffect(() => {
+            setTextContent(textL34.replace(/\n/g, '<br/>'));
+        }, []);
 
+        return (
+            <TextForReading
+                audioSrc="L31_4_Text_for_reading.mp3"
+                text={textContent}
+            />
+        );
+    };
+
+    const rootLexical = ReactDOM.createRoot(document.getElementById('lexical-substitution-exercise-container'));
+    rootLexical.render(<Lexical/>);
+
+    const rootReading = ReactDOM.createRoot(document.getElementById('text-for-reading-container'));
+    rootReading.render(<Reading/>);
 
 </script>
 </body>
