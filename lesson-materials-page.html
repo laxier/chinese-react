@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 31 Materials</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            /*font-family: KaiTi, 'Adobe Kaiti Std', SimSun, MingLiU, PMingLiU, serif; !* Fallback to serif if none of the specified fonts are available *!*/
+            background-color: #f5f5f5;
+            max-width: 70%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .material {
+            margin-bottom: 20px;
+        }
+
+        .material h2 {
+            margin-bottom: 10px;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        .exercise-container {
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 20px;
+            /*padding: 10px;*/
+            /*border: 1px solid #ddd;*/
+        }
+
+        .play-audio-button {
+            background-color: #007bff; /* Bootstrap primary blue */
+            color: white; /* Text color */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px 20px; /* Padding inside button */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth color transition */
+        }
+
+        .play-audio-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .play-audio-button:focus {
+            outline: none; /* Remove default focus outline */
+        }
+
+        .button-container {
+            display: flex; /* Use Flexbox for alignment */
+            justify-content: center; /* Center the button horizontally */
+            margin-bottom: 10px; /* Add vertical spacing around the button container */
+        }
+
+        .options-grid {
+            flex: 1; /* Занимает вторую часть пространства */
+            display: block; /* Выстраивает option-item по новой строке */
+            margin-top: 10px;
+        }
+
+        .option-item {
+            display: flex;
+            justify-content: space-between; /* Распределение span на равное расстояние */
+            padding: 5px;
+            border: 1px solid #eee;
+            margin-bottom: 10px;
+            white-space: nowrap;
+        }
+
+        .option-item span {
+            flex: 1;
+            text-align: center; /* Выравнивание текста по центру в каждом span */
+        }
+
+        .navigation-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .navigation-controls button {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .navigation-controls button:disabled {
+            background-color: #d6d6d6;
+            cursor: not-allowed;
+        }
+
+        .navigation-controls button:hover:not(:disabled) {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .navigation-controls span {
+            font-size: 16px;
+            margin: 0 15px;
+        }
+
+        .chinese-dialogue {
+            background-color: #fefefe;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            min-width: 50%;
+            max-width: 60%;
+            font-family: KaiTi, 'Adobe Kaiti Std', SimSun, MingLiU, PMingLiU, Arial, 'Times New Roman', serif;
+        }
+
+        .chinese-dialogue p {
+            font-size: 30px;
+            /*line-height: 1.6;*/
+            margin: 0;
+            /*padding: 5px 0;*/
+        }
+
+        .chinese-dialogue .dialogue-line {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .options-grid {
+            /*display: grid;*/
+            /*grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));*/
+            /*gap: 20px;*/
+            padding: 18px;
+            /*max-width: 800px;*/
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .option-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            /*padding: 15px;*/
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            font-family: KaiTi, 'Adobe Kaiti Std', SimSun, MingLiU, PMingLiU, serif; /* Fallback to serif if none of the specified fonts are available */
+        }
+
+        .option-item span {
+            display: block;
+            font-size: 24px;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Lesson 31 Materials</h1>
+
+<div class="material">
+    <h2>1. Text</h2>
+    <audio controls>
+        <source src="L31_1_Text.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<div class="material">
+    <h2>2. New Words</h2>
+    <audio controls>
+        <source src="L31_2_New_words.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+<div class="material">
+    <div id="lexical-substitution-exercise-container"></div>
+</div>
+
+<div class="material">
+    <h2>4. Text for Reading</h2>
+    <audio controls>
+        <source src="L31_4_Text_for_reading.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<div class="material">
+    <h2>5. Exercises</h2>
+    <audio controls>
+        <source src="L31_5_Exercises.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
+
+<div class="material">
+    <h2>Lesson PDF</h2>
+    <p>
+        <a href="L31.pdf" target="_blank">Open Lesson 31 PDF</a>
+    </p>
+</div>
+<script type="text/babel">
+    const {useState, useRef} = React;
+    const LexicalSubstitutionExercise = ({exercises, audioRef}) => {
+        const [currentIndex, setCurrentIndex] = useState(0);
+        const [isPlaying, setIsPlaying] = useState(false);
+
+        const convertTimeToSeconds = (time) => {
+            const [minutes, seconds] = time.split('.').map(Number);
+            return (minutes || 0) * 60 + (seconds || 0);
+        };
+
+        const playAudioAtTime = (time) => {
+            const seconds = convertTimeToSeconds(time);
+            if (audioRef.current) {
+                if (isPlaying) {
+                    audioRef.current.pause();
+                    setIsPlaying(false);
+                } else {
+                    audioRef.current.currentTime = seconds; // Move to specified time
+                    audioRef.current.play(); // Play audio
+                    setIsPlaying(true);
+                }
+            }
+        };
+
+        const handlePrevious = () => {
+            if (currentIndex > 0) {
+                setCurrentIndex(currentIndex - 1);
+            }
+        };
+
+        const handleNext = () => {
+            if (currentIndex < exercises.length - 1) {
+                setCurrentIndex(currentIndex + 1);
+            }
+        };
+
+        const currentExercise = exercises[currentIndex];
+
+        return (
+            <div>
+                <div className="navigation-controls">
+                    <button onClick={handlePrevious} disabled={currentIndex === 0}>
+                        Previous
+                    </button>
+                    <span>Task {currentIndex + 1} of {exercises.length}</span>
+                    <button onClick={handleNext} disabled={currentIndex === exercises.length - 1}>
+                        Next
+                    </button>
+                </div>
+                <div key={currentIndex} className="exercise-container">
+                    <div className="chinese-dialogue">
+                        <div class="button-container">
+                            <button onClick={() => playAudioAtTime(currentExercise.time)} className="play-audio-button">
+                                Play
+                            </button>
+                        </div>
+                        {currentExercise.dialogue.map((dialogue, dialogueIndex) => (
+                            <p className="dialogue-line"> - {dialogue}</p>
+                        ))}
+                    </div>
+
+                    {currentExercise.options && currentExercise.options.length > 0 && (
+                        <div className="options-grid">
+                            {currentExercise.options.map((option, optionIndex) => (
+                                <div key={optionIndex} className="option-item">
+                                    <button onClick={() => playAudioAtTime(option.time)} className="play-audio-button">
+                                        Play audio
+                                    </button>
+                                    {option.words.map((option_i, wordIndex) => (
+                                        <span key={wordIndex}>{option_i}</span>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+            </div>
+        );
+    };
+    const exercisesData = [
+        {
+            dialogue: ["下午你工作了吗?", "我工作", "你工作了几个小时？", "我工作了三仝小时。"],
+            time: "0.0",
+            options: [
+                {words: ["锻炼", "一个小时"], time: "0.27"},
+                {words: ["玩儿", "半个小时"], time: "1.02"},
+                {words: ["复习", "一个半小时"], time: "1.34"},
+                {words: ["睡觉", "两个小时"], time: "2.08"},
+                {words: ["参观", "三个小时"], time: "2.32"}
+            ]
+        },
+        {
+            dialogue: ["他在上海住了几个月?", "他在上海住了三个月。"],
+            time: "3.02",
+            options: [
+                {words: ["首都", "两个月"], time: "3.23"},
+                {words: ["农村", "半个月"], time: "3.44"},
+                {words: ["学校", "一年"], time: "4.06"},
+                {words: ["工厂", "半年"], time: "4.24"}
+            ]
+        },
+        {
+            dialogue: ["那位老师教书教了多长时间?", "他教书教了三十多年。"],
+            time: "4.45",
+            options: [
+                {words: ["访问", "中国", "两个多星期"], time: "5.07"},
+                {words: ["坐", "车", "七个多小时"], time: "5.30"},
+                {words: ["办", "手续", "十五分钟"], time: "5.50"},
+                {words: ["钓", "鱼", "三个多小时"], time: "6.11"},
+                {words: ["听", "录音", "半天"], time: "6.33"}
+            ]
+        },
+        {
+            dialogue: ["你学了几年中文了?", "我学了两年中文", "你学得真不错。", "哪里，还差得远呢。"],
+            time: "6.59",
+            options: [
+                {words: ["教", "语言课", "十五年"], time: "7.33"},
+                {words: ["当", "翻译", "两年多"], time: "8.12"},
+                {words: ["开", "车", "二十多年"], time: "8.36"},
+                {words: ["研究", "中国文学", "四年"], time: "8.56"}
+            ]
+        },
+        {
+            dialogue: ["他们跳舞跳了一个晚上吗?", "他们没有跳一个晚上，他们跳了半个多小时。"],
+            time: "9.23",
+            options: [
+                {words: ["看电视", "一个下午", "十几分钟"], time: "9.39"},
+                {words: ["听音乐", "一个上午", "一刻钟"], time: "9.58"},
+                {words: ["踢足球", "一个多小时", "一会儿"], time: "10.16"},
+                {words: ["开会", "两个小时", "一个多小时"], time: "10.36"},
+                {words: ["谈话", "很长时间", "几分钟"], time: "10.55"}
+            ]
+        },
+        {
+            dialogue: ["这本词典你要用很长时间吗?", "我不要用很长时间，我要用三天。"],
+            time: "11.17",
+            options: [
+                {words: ["那些杂志", "看", "两天"], time: "11.38"},
+                {words: ["今天的练习", "做", "三刻钟"], time: "11.57"},
+                {words: ["那些东西", "整理", "一个晚上"], time: "12.18"},
+                {words: ["这本书", "翻译", "两个多月"], time: "12.39"}
+            ]
+        },
+        {
+            dialogue: [
+                "在海关办手续 Прохождение таможни",
+                "请让我看看您的护照。",
+                "好。这是我的护照。",
+                "你有几件行李？",
+                "两件。里边都是自己用的东西。",
+                "有烟、酒吗？",
+                "有几包烟，没有酒。",
+                "有要报关的或者禁运的东西吗？",
+                "没有。"
+            ],
+            time: "12.58", // Время для общего диалога, можно оставить 0.0, если не нужно
+            options: [] // Отсутствие опций
+        },
+        {
+            dialogue: [
+                "迎接 Встреча в аэропорту",
+                "请问，您是从中国来的赵先生吗？",
+                "是的，我叫赵辛。您是…",
+                "我叫伊万诺夫谢尔盖，是外语学院的代表。欢迎您到我们学院工作。",
+                "谢谢。认识您，我很高兴。",
+                "路上好吗？",
+                "很好。在地图上北京离这儿很远,可是我们坐了八个多小时飞机就到了。",
+                "希望你在我校过得很好。",
+                "谢谢您。"
+            ],
+            time: "13.45",
+            options: [] // Отсутствие опций
+        },
+        {
+            dialogue: [
+                "谈计划（jihua — план） Разговор о планах на будущее",
+                "你准备在中国学习几年？",
+                "我准备在中国学习三年。我希望能到北京大学中文系学习现代文学。",
+                "第一年你就去北京大学吗？",
+                "不。我想在语言文化大学学习半年汉语。我的口语不太好，我还要复习一下儿语法。",
+                "回国以后你就研究中国现代文学吗？",
+                "回国以后我还要念一年大学。"
+            ],
+            time: "14.53",
+            options: [] // Отсутствие опций
+        },
+        {
+            dialogue: [
+                "遇见好久没见的人 Встреча после долгой разлуки",
+                "很长时间没见了，你去哪儿了？",
+                "我去天津*了，在那儿住了半个多月。",
+                "去那儿开会吗？",
+                "不，我去看一个朋友，他身体不太好。"
+            ],
+            time: "16.09",
+            options: [] // Отсутствие опций
+        },
+        {
+            dialogue: [
+                "Объявление в салоне самолета",
+                "女士们，先生们，北京到了。飞机就要降落了, 请系上安全带, 不要吸烟。谢谢。"
+            ],
+            time: "16.53",
+            options: [] // Отсутствие опций
+        },
+        {
+            dialogue: [
+                "В самолете. Разговор об изучении языка страны",
+                "你在北京学了多长时间？",
+                "三年多了。",
+                "那你汉语说得一定很好啦",
+                "哪里，差得远呢！"
+            ],
+            time: "17.19",
+            options: [] // Отсутствие опций
+        },
+        {
+            dialogue: [
+                "В самолете. Отдельные фразы из беседы со стюардессой",
+                "你的座位号是24号，就在这儿。",
+                "这是您第一次乘我们的飞机吗？",
+                "你说得太快了，请说慢一点。",
+                "你能懂我说的话吗？",
+                "我试试给你翻译一下。",
+                "你能不能告诉我，我们什么时候能到北京？",
+                "您想喝点儿什么？",
+                "一杯咖啡加奶。",
+                "请再给我一杯茶，加两块糖。"
+            ],
+            time: "17.43",
+            options: [] // Отсутствие опций
+        },
+        {
+            dialogue: [
+                "Объявления при посадке самолета по прибытии",
+                "飞机正在准备降落。",
+                "请所有的旅客下飞机。",
+                "请各位检查一下，别忘了带自己的东西。",
+                "旅客们，请注意，下机后请走16号门。",
+                "欢迎你们下次再来乘坐我们的飞机。"
+            ],
+            time: "19.29",
+            options: [] // Отсутствие опций
+        },
+        {
+            dialogue: [
+                "Паспортный контроль",
+                "你是哪国人？",
+                "我是俄罗斯公民。我的护照/签证号码是—",
+                "护照/签证是在什么地方，什么时候签发的？",
+                "护照/签证是2007年一月十日在圣彼得堡签发的。"
+            ],
+            time: "20.16",
+            options: [] // Отсутствие опций
+        }];
+    const App = () => {
+        const audioRef = React.useRef(null);
+
+        return (
+            <div className="material">
+                <h2>3. Lexical Exercises</h2>
+                <audio ref={audioRef} controls>
+                    <source src="L31_3_Lexical_exercises.mp3" type="audio/mpeg"/>
+                    Your browser does not support the audio element.
+                </audio>
+                <LexicalSubstitutionExercise exercises={exercisesData} audioRef={audioRef}/>
+            </div>
+        );
+    };
+
+    ReactDOM.render(<App/>, document.getElementById('lexical-substitution-exercise-container'));
+
+
+</script>
+</body>
+</html>
