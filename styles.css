@@ -1,0 +1,154 @@
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: #f5f5f5;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.material {
+    margin-bottom: 20px;
+}
+
+.material h2 {
+    margin-bottom: 10px;
+}
+
+audio {
+    width: 100%;
+}
+
+.exercise-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.play-audio-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.play-audio-button:hover {
+    background-color: #0056b3;
+}
+
+.play-audio-button:focus {
+    outline: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.options-grid {
+    flex: 1;
+    display: block;
+    margin-top: 10px;
+}
+
+.option-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.option-item span {
+    flex: 1;
+    text-align: center;
+}
+
+.navigation-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.navigation-controls button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navigation-controls button:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+}
+
+.navigation-controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.navigation-controls span {
+    font-size: 16px;
+    margin: 0 15px;
+}
+
+.chinese-dialogue {
+    background-color: #fefefe;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 50%;
+    max-width: 60%;
+    font-family: KaiTi, 'Adobe Kaiti Std', SimSun, MingLiU, PMingLiU, Arial, 'Times New Roman', serif;
+}
+
+.chinese-dialogue p {
+    font-size: 30px;
+    margin: 0;
+}
+
+.chinese-dialogue .dialogue-line {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.options-grid {
+    padding: 18px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.option-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-family: KaiTi, 'Adobe Kaiti Std', SimSun, MingLiU, PMingLiU, serif;
+}
+
+.option-item span {
+    display: block;
+    font-size: 24px;
+    color: #333;
+}
