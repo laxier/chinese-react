@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84471027-c8bd-4bd8-99b0-1e73009baf88" name="Changes" comment="первый проект на реакт">
-      <change afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/exercisesData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+    <list default="true" id="84471027-c8bd-4bd8-99b0-1e73009baf88" name="Changes" comment="создал локальный сервер чтоб решить проблему с CORS policy. но теперь прогружается медленно аудио">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1726322105104</updated>
-      <workItem from="1726322107995" duration="987000" />
+      <workItem from="1726322107995" duration="1350000" />
     </task>
     <task id="LOCAL-00001" summary="первый проект на реакт">
       <option name="closed" value="true" />
@@ -82,7 +79,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726322228305</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="создал локальный сервер чтоб решить проблему с CORS policy. но теперь прогружается медленно аудио">
+      <option name="closed" value="true" />
+      <created>1726323143255</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726323143255</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,6 +106,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="первый проект на реакт" />
-    <option name="LAST_COMMIT_MESSAGE" value="первый проект на реакт" />
+    <MESSAGE value="создал локальный сервер чтоб решить проблему с CORS policy. но теперь прогружается медленно аудио" />
+    <option name="LAST_COMMIT_MESSAGE" value="создал локальный сервер чтоб решить проблему с CORS policy. но теперь прогружается медленно аудио" />
   </component>
 </project>
