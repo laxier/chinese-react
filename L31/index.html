@@ -4,22 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 31 Materials</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <link rel="stylesheet" href="../styles.css">
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
 </head>
 <body>
 <h1>Lesson 31 Materials</h1>
 
 <div class="material">
-    <h2>1. Text</h2>
-    <audio controls>
-        <source src="L31_1_Text.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+    <div id="text-substitution-container"></div>
 </div>
 
 <div class="material">
@@ -152,6 +146,21 @@
         );
     };
 
+    const TextGeneral = ({audioSrc, text}) => {
+        return (
+            <div className="material">
+                <h2>1. Text</h2>
+                <audio controls>
+                    <source src={audioSrc} type="audio/mpeg"/>
+                    Your browser does not support the audio element.
+                </audio>
+                <div className="chinese-dialogue" style={{minWidth: '100%'}}
+                     dangerouslySetInnerHTML={{__html: text}}>
+                </div>
+            </div>
+        );
+    };
+
     const Lexical = () => {
         const audioRef = React.useRef(null);
 
@@ -181,11 +190,29 @@
         );
     };
 
+    const Text = () => {
+        const [textContent, setTextContent] = useState('');
+
+        useEffect(() => {
+            setTextContent(textL34_Osnov.replace(/\n/g, '<br/>'));
+        }, []);
+
+        return (
+            <TextGeneral
+                audioSrc="L31_1_Text.mp3"
+                text={textContent}
+            />
+        );
+    };
+
     const rootLexical = ReactDOM.createRoot(document.getElementById('lexical-substitution-exercise-container'));
     rootLexical.render(<Lexical/>);
 
     const rootReading = ReactDOM.createRoot(document.getElementById('text-for-reading-container'));
     rootReading.render(<Reading/>);
+
+    const rootText = ReactDOM.createRoot(document.getElementById('text-substitution-container'));
+    rootText.render(<Text/>);
 
 </script>
 </body>

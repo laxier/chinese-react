@@ -107,6 +107,7 @@ audio {
 }
 
 .chinese-dialogue {
+    text-align: justify;
     background-color: #fefefe;
     border: 1px solid #ddd;
     font-size: 26px;

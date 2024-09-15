@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84471027-c8bd-4bd8-99b0-1e73009baf88" name="Changes" comment="потом сделаю через react creator. пока так оставлю с кодом внутри страницы">
-      <change afterPath="$PROJECT_DIR$/L31_4_Text_for_reading.js" afterDir="false" />
+    <list default="true" id="84471027-c8bd-4bd8-99b0-1e73009baf88" name="Changes" comment="оформил текст для чтения на страницу">
+      <change afterPath="$PROJECT_DIR$/L31/L31_4_Text_for_reading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/L32/L32_Text_for_reading.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L31.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/L31/L31.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L31_1_Text.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/L31/L31_1_Text.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L31_2_New_words.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/L31/L31_2_New_words.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L31_3_Lexical_exercises.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/L31/L31_3_Lexical_exercises.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L31_4_Text_for_reading.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/L31_4_Text_for_reading.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/L31/L31_4_Text_for_reading.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/L31_5_Exercises.mp3" beforeDir="false" afterPath="$PROJECT_DIR$/L31/L31_5_Exercises.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/L31/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercisesData.js" beforeDir="false" afterPath="$PROJECT_DIR$/L31/exercisesData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/L31/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson-materials-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/L31/lesson-materials-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/L31/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +51,7 @@
     &quot;Node.js.app.js.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/iCloudDrive/Documents/。汉语/。旧汉语书 Kondrashevsky/website&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/iCloudDrive/Documents/。汉语/。旧汉语书 Kondrashevsky/website/L31&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -50,11 +62,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\iCloudDrive\Documents\。汉语\。旧汉语书 Kondrashevsky\website\L31" />
+      <recent name="C:\Users\Admin\iCloudDrive\Documents\。汉语\。旧汉语书 Kondrashevsky\website\L32" />
       <recent name="C:\Users\Admin\iCloudDrive\Documents\。汉语\。旧汉语书 Kondrashevsky\website" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\iCloudDrive\Documents\。汉语\。旧汉语书 Kondrashevsky\website\L31" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/L31/app.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -79,7 +96,10 @@
       <option name="presentableId" value="Default" />
       <updated>1726322105104</updated>
       <workItem from="1726322107995" duration="1412000" />
-      <workItem from="1726330658024" duration="2520000" />
+      <workItem from="1726330658024" duration="3402000" />
+      <workItem from="1726334493657" duration="50000" />
+      <workItem from="1726336237384" duration="2986000" />
+      <workItem from="1726374980792" duration="1235000" />
     </task>
     <task id="LOCAL-00001" summary="первый проект на реакт">
       <option name="closed" value="true" />
@@ -105,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726323509057</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="оформил текст для чтения на страницу">
+      <option name="closed" value="true" />
+      <created>1726333334860</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726333334860</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +154,7 @@
     <MESSAGE value="первый проект на реакт" />
     <MESSAGE value="создал локальный сервер чтоб решить проблему с CORS policy. но теперь прогружается медленно аудио" />
     <MESSAGE value="потом сделаю через react creator. пока так оставлю с кодом внутри страницы" />
-    <option name="LAST_COMMIT_MESSAGE" value="потом сделаю через react creator. пока так оставлю с кодом внутри страницы" />
+    <MESSAGE value="оформил текст для чтения на страницу" />
+    <option name="LAST_COMMIT_MESSAGE" value="оформил текст для чтения на страницу" />
   </component>
 </project>
